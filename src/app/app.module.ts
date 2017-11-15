@@ -9,6 +9,7 @@ import { HomeComponent } from './main/home/home.component';
 import { PressComponent } from './main/press/press.component';
 import { AboutComponent } from './main/about/about.component';
 import { MainComponent } from './main/main.component';
+import { MapComponent } from './main/home/map/map.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MainComponent } from './main/main.component';
     HomeComponent,
     PressComponent,
     AboutComponent,
-    MainComponent
+    MainComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
