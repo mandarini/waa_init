@@ -5,9 +5,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { HomeComponent } from './home/home.component';
-import { PressComponent } from './press/press.component';
-import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './main/home/home.component';
+import { PressComponent } from './main/press/press.component';
+import { AboutComponent } from './main/about/about.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AboutComponent } from './about/about.component';
     WelcomeComponent,
     HomeComponent,
     PressComponent,
-    AboutComponent
+    AboutComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
