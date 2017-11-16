@@ -1,6 +1,5 @@
-import {Injectable, ModuleWithProviders, Optional} from '@angular/core';
-import {UserServiceConfig} from './gmap';
-import {BehaviorSubject, Observable} from 'rxjs/Rx';
+import { Injectable, ModuleWithProviders, Optional } from '@angular/core';
+import { UserServiceConfig } from './gmap';
 
 @Injectable()
 export class GmapService {
