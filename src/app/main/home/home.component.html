@@ -1,4 +1,17 @@
 <p>
   home works!
 </p>
-<app-map></app-map>
+<p>
+  {{uuid$}}
+</p>
+<ul>
+  <li class="text" *ngFor="let artist of artists | async" (click)="onSelect(artist)">
+      {{artist.name_en}}
+  </li>
+</ul>
+<app-gmap></app-gmap>
+<ul>
+  <li class="text" *ngFor="let space of spaces | async">
+    {{space.address_en}}
+  </li>
+</ul>

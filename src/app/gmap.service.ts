@@ -1,5 +1,5 @@
 import { Injectable, ModuleWithProviders, Optional } from '@angular/core';
-import { UserServiceConfig } from './gmap';
+import { GoogleServiceConfig } from './gmap';
 
 @Injectable()
 export class GmapService {
@@ -18,13 +18,13 @@ export class GmapService {
       /**
        * Configure core method
        * @param config
-       * @returns {{ngModule: GmapService, providers: [{provide: UserServiceConfig, useValue: UserServiceConfig}]}}
+       * @returns {{ngModule: GmapService, providers: [{provide: GoogleServiceConfig, useValue: GoogleServiceConfig}]}}
        */
-      static forRoot(config: UserServiceConfig): ModuleWithProviders {
+      static forRoot(config: GoogleServiceConfig): ModuleWithProviders {
           return {
               ngModule: GmapService,
               providers: [
-                  {provide: UserServiceConfig, useValue: config}
+                  {provide: GoogleServiceConfig, useValue: config}
               ]
           };
       }
@@ -33,9 +33,9 @@ export class GmapService {
        * Constructor
        * @param config
        */
-      constructor(@Optional() config: UserServiceConfig) {
+      constructor(@Optional() config: GoogleServiceConfig) {
           if (config) {
-              this.url = config.url + '&callback=__onGoogleLoaded';
+              this.url = config.maps_url + '&callback=__onGoogleLoaded';
           } else {
               throw new Error('Module have been forRoot({API_KEY: your api key})');
           }

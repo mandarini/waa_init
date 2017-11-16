@@ -1,7 +1,7 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {GmapService} from './gmap.service';
-import {UserServiceConfig} from './gmap';
+import {GoogleServiceConfig} from './gmap';
 
 @NgModule({
     imports: [CommonModule],
@@ -11,13 +11,13 @@ export class GmapModule {
   /**
      * Configure core method
      * @param config
-     * @returns {{ngModule: GoogleMapsModule, providers: [{provide: UserServiceConfig, useValue: UserServiceConfig}]}}
+     * @returns {{ngModule: GoogleMapsModule, providers: [{provide: GoogleServiceConfig, useValue: GoogleServiceConfig}]}}
      */
-    static forRoot(config: UserServiceConfig): ModuleWithProviders {
+    static forRoot(config: GoogleServiceConfig): ModuleWithProviders {
         return {
             ngModule: GmapModule,
             providers: [
-                {provide: UserServiceConfig, useValue: config}
+                {provide: GoogleServiceConfig, useValue: config}
             ]
         };
     }
