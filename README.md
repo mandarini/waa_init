@@ -3,14 +3,14 @@
 _Disclaimer_:
 _This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0._
 
-##Menu
+## Menu
 * [Gerenal Description](#general-description)
 * [More](#more)
 * [Credits](#credits)
 
 ## General Description
 
-The __new__ version of [We Are Athens](http://weareathens.gr) website. This time, using Angular!
+The __new__ version of [We Are Athens](https://weareathens.gr) website. This time, using Angular!
 
 ## More
 
