@@ -1,17 +1,36 @@
 <p>
   home works!
 </p>
-<p>
-  {{uuid$}}
-</p>
-<ul>
-  <li class="text" *ngFor="let artist of artists | async" (click)="onSelect(artist)">
-      {{artist.name_en}}
-  </li>
-</ul>
-<app-gmap></app-gmap>
-<ul>
-  <li class="text" *ngFor="let space of spaces | async">
-    {{space.address_en}}
-  </li>
-</ul>
+<div *ngIf="artistDetails">
+  <div *ngFor="let one of artistDetails">
+    <p>
+      {{one.name_en}}
+    </p>
+    <p>
+      {{one.webpage}}
+    </p>
+    <div *ngIf="one.images">
+      <img src="{{one.images.img1}}" width="100px"/>
+      <img src="{{one.images.img2}}" width="100px"/>
+    </div>
+  </div>
+</div>
+<div class="flex-container justify-space-between">
+  <div class="artist-list">
+    <ul>
+      <li class="text" *ngFor="let artist of artists | async" (click)="onSelect(artist)">
+          {{artist.name_en}}
+      </li>
+    </ul>
+  </div>
+<div>
+  <app-gmap></app-gmap>
+</div>
+<div class="artist-list">
+  <ul>
+    <li class="text" *ngFor="let space of spaces | async">
+      {{space.address_en}}
+    </li>
+  </ul>
+</div>
+</div>

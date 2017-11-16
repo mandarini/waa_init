@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
 
   artists: Observable<Artist[]>;
   spaces: Observable<any[]>;
-  // items$: Observable<AngularFireAction<AngularFireDatabase.DataSnapshot>[]>;
   uuid$: BehaviorSubject<string|null>;
 
   selectedArtist: Artist;
@@ -44,26 +43,14 @@ export class HomeComponent implements OnInit {
     var queryObservable = this.uuid$.switchMap(uuid =>
       db.list('/participantDetails', ref => ref.orderByChild('uuid').equalTo(uuid)).valueChanges()
     );
-    // subscribe to changes
-    queryObservable.subscribe(queriedItems => {
-      console.log(queriedItems);
-    });
 
-    // this.uuid$ = new BehaviorSubject(null);
-    // this.items$ = this.uuid$.switchMap(uuid =>
-    //   db.list('/participantDetails', ref =>
-    //     uuid ? ref.orderByChild('uuid').equalTo(uuid) : ref
-    //   ).snapshotChanges()
-    // );
     this.uuid$.subscribe({
       next: (v) => queryObservable.subscribe(v => {
         console.log(v);
         this.artistDetails=v;
       })
     });
-    // this.items$.subscribe(queriedItems => {
-    //   console.log(queriedItems;
-    // });
+
   }
 
   ngOnInit() {
