@@ -2,16 +2,16 @@
  display : -webkit-flex;
  display : -ms-flexbox;
  display : flex;
- padding:20px;
- width:100%;
+ padding:5px;
+ width:90vw;
  }
+
 .justify-space-between {
    -webkit-justify-content: space-between;
    -ms-flex-pack: justify;
    justify-content: space-between;
  }
 
-
 .artist-list {
-  width: 30%;
+  width: 20%;
 }

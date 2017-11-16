@@ -19,9 +19,7 @@ export class HomeComponent implements OnInit {
   artists: Observable<Artist[]>;
   spaces: Observable<any[]>;
   uuid$: BehaviorSubject<string|null>;
-
   selectedArtist: Artist;
-
   artistDetails: Object;
 
   onSelect(artist: Artist): void {
@@ -50,11 +48,8 @@ export class HomeComponent implements OnInit {
         this.artistDetails=v;
       })
     });
-
   }
 
   ngOnInit() {
-    console.log(this.artists);
   }
-
 }

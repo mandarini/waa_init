@@ -8,8 +8,6 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 
-import * as firebase from 'firebase';
-
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './main/home/home.component';
@@ -17,6 +15,7 @@ import { PressComponent } from './main/press/press.component';
 import { AboutComponent } from './main/about/about.component';
 import { MainComponent } from './main/main.component';
 import { GmapComponent } from './main/home/gmap/gmap.component';
+import { ArtistDetailComponent } from './main/home/artist-detail/artist-detail.component';
 
 
 @NgModule({
@@ -27,7 +26,8 @@ import { GmapComponent } from './main/home/gmap/gmap.component';
     PressComponent,
     AboutComponent,
     MainComponent,
-    GmapComponent
+    GmapComponent,
+    ArtistDetailComponent
   ],
   imports: [
     BrowserModule,

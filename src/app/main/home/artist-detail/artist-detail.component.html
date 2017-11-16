@@ -1,0 +1,12 @@
+<div *ngFor="let one of artist">
+  <p>
+    {{one.name_en}}
+  </p>
+  <p>
+    {{one.webpage}}
+  </p>
+  <div *ngIf="one.images">
+    <img src="{{one.images.img1}}" width="100px"/>
+    <img src="{{one.images.img2}}" width="100px"/>
+  </div>
+</div>
