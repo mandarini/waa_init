@@ -32,7 +32,7 @@ import { GmapComponent } from './main/about/gmap/gmap.component';
     Without the callback
     */
     GmapModule.forRoot({
-          url: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAwVnwE1bEZf_Bkk_pSkGM0XlBSXJocVUY'
+          url: 'https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAwVnwE1bEZf_Bkk_pSkGM0XlBSXJocVUY'
       })
   ],
   providers: [],
