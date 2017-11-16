@@ -2,19 +2,19 @@
   <div class="artist-list">
     <ul>
       <li class="text" *ngFor="let artist of artists | async" (click)="onSelect(artist)">
-          {{artist.name_en}}
+        {{artist.name_en}}
       </li>
     </ul>
   </div>
-<div>
-  <app-gmap></app-gmap>
-  <app-artist-detail *ngIf="artistDetails" [artist]="artistDetails"></app-artist-detail>
-</div>
-<div class="artist-list">
-  <ul>
-    <li class="text" *ngFor="let space of spaces | async">
-      {{space.address_en}}
-    </li>
-  </ul>
-</div>
+  <div>
+    <app-gmap *ngIf="spaces" [spaces]="spaces"></app-gmap>
+    <app-artist-detail *ngIf="artistDetails" [artist]="artistDetails"></app-artist-detail>
+  </div>
+  <div class="artist-list">
+    <ul>
+      <li class="text" *ngFor="let space of spaces | async">
+        {{space.address_en}}
+      </li>
+    </ul>
+  </div>
 </div>
